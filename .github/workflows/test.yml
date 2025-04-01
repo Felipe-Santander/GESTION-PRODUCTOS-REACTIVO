@@ -1,5 +1,5 @@
 name: Java CI with Maven
-# Comentario añadido
+
 on:
   push:
     branches: [ "main" ]
@@ -30,6 +30,6 @@ jobs:
         cache: 'maven'
     
     - name: Build and test with Maven
-      run: ./mvnw clean test
+      run: mvn clean test
       env:
         SPRING_DATA_MONGODB_URI: mongodb://root:example@localhost:27017/gestion-productos?authSource=admin
